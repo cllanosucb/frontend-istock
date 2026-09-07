@@ -5,10 +5,6 @@ import Layout from './components/Layout';
 
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
-import InventarioListPage from './pages/InventarioListPage';
-import InventarioFormPage from './pages/InventarioFormPage';
-import VentasListPage from './pages/VentasListPage';
-import VentasFormPage from './pages/VentasFormPage';
 
 export default function App() {
   return (
@@ -16,6 +12,19 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
+
+          <Route
+            element={
+              <ProtectedRoute>
+                <Layout />
+              </ProtectedRoute>
+            }
+          >
+            <Route path="/dashboard" element={<DashboardPage />} />
+
+            
+          </Route>
+
         </Routes>
       </BrowserRouter>
     </AuthProvider>
