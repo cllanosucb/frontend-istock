@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import InventarioListPage from './pages/InventarioListPage';
+import InventarioFormPage from './pages/InventarioFormPage';
 
 export default function App() {
   return (
@@ -24,6 +25,8 @@ export default function App() {
             <Route path="/dashboard" element={<DashboardPage />} />
 
             <Route path="/inventario" element={<InventarioListPage />} />
+            <Route path="/inventario/nuevo" element={<InventarioFormPage />} />
+            <Route path="/inventario/:id/editar" element={<InventarioFormPage />} />
           </Route>
 
         </Routes>
