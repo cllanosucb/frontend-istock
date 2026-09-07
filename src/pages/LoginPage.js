@@ -71,6 +71,8 @@ export default function LoginPage() {
                         <p className="text-sm text-danger bg-red-50 rounded-xl px-3 py-2">{error}</p>
                     )}
 
+                    <p className="text-sm text-neutral-500 mt-1">Acceda con : admin@istock.com   -  admin123</p>
+
                     <button
                         type="submit"
                         disabled={cargando}
