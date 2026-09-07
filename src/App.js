@@ -8,6 +8,7 @@ import DashboardPage from './pages/DashboardPage';
 import InventarioListPage from './pages/InventarioListPage';
 import InventarioFormPage from './pages/InventarioFormPage';
 import VentasListPage from './pages/VentasListPage';
+import VentasFormPage from './pages/VentasFormPage';
 
 export default function App() {
   return (
@@ -30,8 +31,12 @@ export default function App() {
             <Route path="/inventario/:id/editar" element={<InventarioFormPage />} />
 
             <Route path="/ventas" element={<VentasListPage />} />
+            <Route path="/ventas/nueva" element={<VentasFormPage />} />
+            <Route path="/ventas/:id/editar" element={<VentasFormPage />} />
           </Route>
 
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
